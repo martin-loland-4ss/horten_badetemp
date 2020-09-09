@@ -19,7 +19,7 @@ def raw_data_to_dict_list(data):
     for feature in data["features"]:
         d = {
             "location": feature["geometry"]['coordinates'],
-            "temperature": feature["properties"]['last'],
+            "temperature": float(feature["properties"]['last']),
             "updated": feature["properties"]['time']
         }
         array.append(d)
