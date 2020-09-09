@@ -1,4 +1,9 @@
 
+
+def squared(num):
+    return num**2
+
+
 def average_latlon(latitudes, longitudes):
     "take in latitudes and longitudes (list of numbers) and return averages (tuple of two numbers)"
 
