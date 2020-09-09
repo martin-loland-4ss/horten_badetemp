@@ -12,6 +12,8 @@ def average_latlon(latitudes, longitudes):
 
 def timestamp2human(timestamp):
     "read timestamp (str) and return human x days/hours/minutes ago (str)"
+    time = arrow.get(timestamp)
+    return time.humanize()
 
 
 def geojson_to_datalist(geojson):
