@@ -4,5 +4,5 @@ from horten_badetemp.readers import *
 from horten_badetemp.transformers import *
 
 num = 4
-result = squared(4)
+result = squared(num)
 print(f"the squared of {num} is {result}")
