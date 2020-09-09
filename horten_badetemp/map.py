@@ -1,7 +1,7 @@
 import ipywidgets
 import ipyleaflet
 from .data import get_features, extract_latlon
-from .transformers import average_latlon
+from .transformers import average_latlon, timestamp2human
 
 
 def get_map(center, zoom):
@@ -28,7 +28,7 @@ def get_marker(coordinate, popup_html):
 
 def get_markers(data):
     """use data (list of dict with keys: 'location', 'coordinate', 'temperature' and 'updated')
-    return (list of ipyleaflet.Marker objects), use get_marker and popup_html function above
+    return (list of ipyleaflet.Marker objects), use get_marker, timestamp2human and popup_html function above
     """
     markers = []
     for feature in data:
