@@ -1,4 +1,5 @@
 import requests
+from .readers import get_config
 
 
 def get_data(api_url):
@@ -30,3 +31,7 @@ def raw_data_to_dict_list(data):
         }
         array.append(d)
     return array
+
+
+def get_features():
+    "use get_config and raw_data_to_dict_list functions to return data (list of dict)"
