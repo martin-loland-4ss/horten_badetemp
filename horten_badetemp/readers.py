@@ -1,5 +1,5 @@
 import json
-from json.decoder import JSONDecodeError
+import json
 
 
 def file_reader(filepath):
