@@ -1,5 +1,7 @@
 import ipywidgets
 import ipyleaflet
+from .data import get_features, extract_latlon
+from .transformers import average_latlon
 
 
 def get_map(center, zoom):
@@ -50,3 +52,24 @@ def add_markers_to_map(map, markers):
 def add_fullscreen_control(map):
     "use map (ipyleaflet.Map object), add fullscreen control and return object"
     map.add_control(ipyleaflet.FullScreenControl())
+
+
+def get_master_map():
+    """Use the following functions to generate a map:
+        get_features
+        extract_latlon
+        average_latlon
+        get_map
+        get_markers
+        add_markers_to_map
+        add_fullscreen_control
+        return map (ipyleaflet.Map object)
+    """
+    features = get_features()
+    latitudes, longitudes = extract_latlon(features)
+    center = average_latlon(latitudes=latitudes, longitudes=longitudes)
+    map = get_map(center=center, zoom=4)
+    markers = get_markers(features)
+    map = add_markers_to_map(map=map, markers=markers)
+    map = add_fullscreen_control(map)
+    return map

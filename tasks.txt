@@ -9,6 +9,7 @@ horten_badetemp/map.py::get_marker
 horten_badetemp/map.py::get_markers
 horten_badetemp/map.py::add_markers_to_map
 horten_badetemp/map.py::add_fullscreen_control
+horten_badetemp/map.py::get_master_map
 horten_badetemp/readers.py::file_reader
 horten_badetemp/readers.py::json2dict
 horten_badetemp/readers.py::get_config
