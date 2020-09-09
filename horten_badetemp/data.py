@@ -1,5 +1,6 @@
 import requests
 from .readers import get_config
+from .readers import json2dict
 
 
 def get_data(api_url):
@@ -17,4 +18,4 @@ def raw_data_to_dict_list(data):
 
 
 def get_features():
-    "use get_config, get_data and raw_data_to_dict_list functions to return data (list of dict)"
+    "use get_config, get_data, json2dict and raw_data_to_dict_list functions to return data (list of dict)"
