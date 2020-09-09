@@ -35,7 +35,7 @@ def get_markers(data):
         html = popup_html(
             location=feature["location"],
             temperature=feature["temperature"],
-            updated=feature["updated"]
+            updated=timestamp2human(feature["updated"])
         )
         marker = get_marker(coordinate=feature["coordinate"], popup_html=html)
         markers.append(marker)
