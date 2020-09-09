@@ -15,5 +15,6 @@ def json2dict(json_text):
 
 def get_config():
     "use file_reader and json2dict to return content of config.json as (dict)"
-    text = file_reader("config.json")
+    this_folder = pathlib.Path(__file__).parent
+    text = file_reader(this_folder / "config.json")
     return json2dict(text)
