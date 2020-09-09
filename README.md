@@ -19,6 +19,9 @@ python -m ipykernel install --user --name=horten
 
 # Resources
 
+**Data Norge**
+https://data.norge.no/
+
 **ipyleaflet**
 https://ipyleaflet.readthedocs.io/en/latest/index.html
 
