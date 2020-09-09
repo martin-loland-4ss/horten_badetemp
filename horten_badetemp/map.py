@@ -16,16 +16,17 @@ def popup_html(location, temperature, updated):
     return ipywidgets.HTML(html)
 
 
-def get_marker(location, popup_html):
-    "use location (tuple of two numbers) and popup_html (ipywidgets.HTML), return ipyleaflet.Marker object"
-    marker = ipyleaflet.Marker(location=location, draggable=False)
+
+def get_marker(coordinate, popup_html):
+    "use coordinate (tuple of two numbers) and popup_html (ipywidgets.HTML), return ipyleaflet.Marker object"
+    marker = ipyleaflet.Marker(location=coordinate, draggable=False)
     marker.popup = popup_html
     return marker
 
 
 def get_markers(data):
-    """use data (list of dict with keys: 'location', 'temperature' and 'updated')
-    return (list of ipyleaflet.Marker objects), use get_marker function above
+    """use data (list of dict with keys: 'location', 'coordinate', 'temperature' and 'updated')
+    return (list of ipyleaflet.Marker objects), use get_marker and popup_html function above
     """
 
 

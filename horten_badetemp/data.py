@@ -19,7 +19,7 @@ def extract_latlon(data):
 
 def raw_data_to_dict_list(data):
     """convert data (dict) to (list of dict) 
-    where each item in list is feature with 'location', 'temperature' and 'updated'
+    where each item in list is feature with 'location', 'coordinate', 'temperature' and 'updated'
     """
     array = []
     for feature in data["features"]:
