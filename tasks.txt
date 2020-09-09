@@ -12,4 +12,3 @@ horten_badetemp/readers.py::file_reader
 horten_badetemp/readers.py::json2dict
 horten_badetemp/transformers.py::average_latlon
 horten_badetemp/transformers.py::timestamp2human
-horten_badetemp/transformers.py::geojson_to_datalist
