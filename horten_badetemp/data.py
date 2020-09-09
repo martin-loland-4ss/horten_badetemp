@@ -8,7 +8,7 @@ def get_data(api_url):
 
 
 def extract_latlon(data):
-    "extract latitudes and longitudes from data (dict) and return (tuple of two lists with numbers)"
+    "extract latitudes and longitudes from data (list of dict) and return (tuple of two lists with numbers)"
 
 
 def raw_data_to_dict_list(data):
