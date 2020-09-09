@@ -2,7 +2,6 @@
 
 def get_data(api_url):
     "get text from website (api_url) and return content (str)"
-    return api_url[:2]
 
 
 def extract_latlon(data):
