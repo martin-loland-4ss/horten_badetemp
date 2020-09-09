@@ -1,5 +1,4 @@
 import json
-import json
 
 
 def file_reader(filepath):
@@ -15,4 +14,5 @@ def json2dict(json_text):
 
 def get_config():
     "use file_reader and json2dict to return content of config.json as (dict)"
-
+    text = file_reader("config.json")
+    return json2dict(text)

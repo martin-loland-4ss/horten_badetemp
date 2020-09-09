@@ -35,3 +35,4 @@ def raw_data_to_dict_list(data):
 
 def get_features():
     "use get_config and raw_data_to_dict_list functions to return data (list of dict)"
+    config = get_config()
