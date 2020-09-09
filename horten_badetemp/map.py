@@ -4,14 +4,23 @@ import ipyleaflet
 
 def get_map(center, zoom):
     "use center (tuple of two numbers) and zoom (number),  return ipyleaflet.Map object"
+    return ipyleaflet.Map(
+        center=center,
+        zoom=zoom
+    )
 
 
 def popup_html(location, temperature, updated):
     "use location (str), temperature (str) and updated (str), return ipywidgets.HTML object"
+    html = f"<b>{location}</b><br>{temperature}&#8451;<br>{updated}"
+    return ipywidgets.HTML(html)
 
 
 def get_marker(location, popup_html):
     "use location (tuple of two numbers) and popup_html (str), return ipyleaflet.Marker object"
+    marker = ipyleaflet.Marker(location=location, draggable=False)
+    marker.popup = popup_html
+    return marker
 
 
 def get_markers(data):
