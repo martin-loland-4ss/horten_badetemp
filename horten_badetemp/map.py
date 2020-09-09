@@ -71,7 +71,7 @@ def get_master_map():
     features = get_features()
     latitudes, longitudes = extract_latlon(features)
     center = average_latlon(latitudes=latitudes, longitudes=longitudes)
-    map = get_map(center=center, zoom=20)
+    map = get_map(center=center, zoom=11)
     markers = get_markers(features)
     map = add_markers_to_map(map=map, markers=markers)
     map = add_fullscreen_control(map)
