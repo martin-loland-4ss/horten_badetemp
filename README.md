@@ -27,3 +27,8 @@ https://arrow.readthedocs.io/en/stable/
 
 **ipywidgets**
 https://ipywidgets.readthedocs.io/en/latest/
+
+# Run
+```
+voila index.ipynb
+```
