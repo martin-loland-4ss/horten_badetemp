@@ -1,4 +1,5 @@
 import json
+from json.decoder import JSONDecodeError
 
 
 def file_reader(filepath):
@@ -9,3 +10,4 @@ def file_reader(filepath):
 
 def json2dict(json_text):
     "read json_text (str) and return (dictionary)"
+    return json.loads(json_text)
