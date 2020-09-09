@@ -1,6 +1,7 @@
 horten_badetemp/config.json
 horten_badetemp/data.py::get_data
 horten_badetemp/data.py::extract_latlon
+horten_badetemp/data.py::raw_data_to_dict_list
 horten_badetemp/map.py::get_map
 horten_badetemp/map.py::popup_html
 horten_badetemp/map.py::get_marker
