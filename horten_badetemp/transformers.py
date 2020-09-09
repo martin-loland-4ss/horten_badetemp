@@ -1,3 +1,4 @@
+import arrow
 
 
 def squared(num):
