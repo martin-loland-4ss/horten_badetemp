@@ -6,6 +6,7 @@ def squared(num):
 
 def average_latlon(latitudes, longitudes):
     "take in latitudes and longitudes (list of numbers) and return averages (tuple of two numbers)"
+    return sum(latitudes)/len(latitudes), sum(longitudes)/len(longitudes)
 
 
 def timestamp2human(timestamp):
