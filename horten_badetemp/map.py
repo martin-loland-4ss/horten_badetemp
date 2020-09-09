@@ -8,7 +8,8 @@ def get_map(center, zoom):
     "use center (tuple of two numbers) and zoom (number),  return ipyleaflet.Map object"
     return ipyleaflet.Map(
         center=center,
-        zoom=zoom
+        zoom=zoom,
+        scroll_wheel_zoom=True
     )
 
 
@@ -38,6 +39,7 @@ def get_markers(data):
         )
         marker = get_marker(coordinate=feature["coordinate"], popup_html=html)
         markers.append(marker)
+    return markers
 
 
 def add_markers_to_map(map, markers):
@@ -52,6 +54,7 @@ def add_markers_to_map(map, markers):
 def add_fullscreen_control(map):
     "use map (ipyleaflet.Map object), add fullscreen control and return object"
     map.add_control(ipyleaflet.FullScreenControl())
+    return map
 
 
 def get_master_map():
@@ -68,7 +71,7 @@ def get_master_map():
     features = get_features()
     latitudes, longitudes = extract_latlon(features)
     center = average_latlon(latitudes=latitudes, longitudes=longitudes)
-    map = get_map(center=center, zoom=4)
+    map = get_map(center=center, zoom=20)
     markers = get_markers(features)
     map = add_markers_to_map(map=map, markers=markers)
     map = add_fullscreen_control(map)

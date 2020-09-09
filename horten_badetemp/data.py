@@ -14,8 +14,8 @@ def extract_latlon(data):
     latitudes = []
     longitudes = []
     for feature in data:
-        latitudes.append(feature["location"][0])
-        longitudes.append(feature["location"][1])
+        latitudes.append(feature["coordinate"][0])
+        longitudes.append(feature["coordinate"][1])
     return latitudes, longitudes
 
 
@@ -26,7 +26,8 @@ def raw_data_to_dict_list(data):
     array = []
     for feature in data["features"]:
         d = {
-            "location": feature["geometry"]['coordinates'],
+            "location": feature["properties"]['device'],
+            "coordinate": feature["geometry"]['coordinates'][::-1],
             "temperature": float(feature["properties"]['last']),
             "updated": feature["properties"]['time']
         }
@@ -37,5 +38,6 @@ def raw_data_to_dict_list(data):
 def get_features():
     "use get_config, get_data, json2dict and raw_data_to_dict_list functions to return data (list of dict)"
     config = get_config()
-    data = get_data(api_url=config["api_url"])
+    data_text = get_data(api_url=config["api_url"])
+    data = json2dict(data_text)
     return raw_data_to_dict_list(data)
