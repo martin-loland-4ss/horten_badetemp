@@ -22,8 +22,7 @@ def get_markers(data):
     """
     markers = []
 
-    for item in data:
-        sample = data[item]
+    for sample in data:
 
         location = sample['location']
         coordrinate = sample['coordinate']
