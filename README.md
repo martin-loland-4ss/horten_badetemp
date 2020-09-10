@@ -1,5 +1,5 @@
 # horten_badetemp
-Velkommen til kurset! Du er en bra person!
+Velkommen til kurset! Du er en veldig bra person!
 
 Viser badetemperaturer i Horten og hvordan man bruker GitHub
 
