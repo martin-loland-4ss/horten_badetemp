@@ -1,6 +1,6 @@
 # horten_badetemp
 Viser badetemperaturer i Horten og hvordan man bruker GitHub
-hei hå nå er det jul igjen
+
 # Preperation
 
 ```

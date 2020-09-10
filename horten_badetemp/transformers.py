@@ -6,8 +6,9 @@ def squared(num):
 
 
 def average_latlon(latitudes, longitudes):
-    avg = (latitudes+longitudes)/2
-    return avg
+    lat = sum(latitudes)/len(latitudes)
+    lon = sum(longitudes)/len(longitudes)
+    return lat,lon
     "take in latitudes and longitudes (list of numbers) and return averages (tuple of two numbers)"
 
 
