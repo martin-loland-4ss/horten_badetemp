@@ -1,4 +1,6 @@
 # horten_badetemp
+Velkommen til kurset!
+
 Viser badetemperaturer i Horten og hvordan man bruker GitHub
 
 # Preperation
