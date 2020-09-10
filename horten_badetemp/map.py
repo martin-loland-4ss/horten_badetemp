@@ -27,6 +27,16 @@ def add_markers_to_map(map, markers):
     add markers to map and return (ipyleaflet.Map object)
     """
 
+    center = (52.204793, 360.121558)
+
+    m = Map(center=center, zoom=15)
+
+    marker = Marker(location=center, draggable=False)
+    m.add_layer(marker);
+
+    m
+)
+
 
 def add_fullscreen_control(map):
     "use map (ipyleaflet.Map object), add fullscreen control and return object"
