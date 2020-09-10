@@ -15,7 +15,17 @@ def raw_data_to_dict_list(data):
     """convert data (dict) to (list of dict) 
     where each item in list is feature with 'location', 'coordinate', 'temperature' and 'updated'
     """
+    array = []
 
+    for feature in data["features"]:
+        loc = feature['properties']['device']
+        coordinate = feature['geometry']['coordinates'][::-1]
+        temp = float(feature['properties']['last'])
+        update = feature['properties']['time']
+        
+        array.append[{'location':loc, 'coordinate':coordinate,'temperature':temp, 'updated':update}
+
+    return array
 
 def get_features():
     "use get_config, get_data, json2dict and raw_data_to_dict_list functions to return data (list of dict)"
