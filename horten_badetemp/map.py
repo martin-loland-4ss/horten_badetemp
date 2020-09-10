@@ -35,6 +35,10 @@ def add_markers_to_map(map, markers):
     """use map (ipyleaflet.Map object) and markers (list of ipyleaflet.Marker objects)
     add markers to map and return (ipyleaflet.Map object)
     """
+    for marker in markers:
+        map.add_layer(marker)
+    return map
+)
 
 
 def add_fullscreen_control(map):
