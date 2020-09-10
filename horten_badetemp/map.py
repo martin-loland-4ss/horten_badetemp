@@ -32,9 +32,9 @@ def get_markers(data):
 
         pop = popup_html(location, temperature, updated)
         marker = get_marker(coordrinate, pop)
-        time = timestamp2human(timestamp)
+        # time = timestamp2human(timestamp)
 
-        markers.append[{time: marker}]
+        markers.append(marker)
 
     return markers
 
