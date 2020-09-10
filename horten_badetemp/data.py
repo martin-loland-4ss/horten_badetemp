@@ -23,6 +23,9 @@ def raw_data_to_dict_list(data):
         temp = data['properties']['last']
         update = data['properties']['time']
         
+        array.append[{'location':loc, 'coordinate':coordinate,'temperature':temp, 'updated':update}
+
+    return array
 
 def get_features():
     "use get_config, get_data, json2dict and raw_data_to_dict_list functions to return data (list of dict)"
