@@ -17,6 +17,12 @@ def raw_data_to_dict_list(data):
     """
     array = []
 
+    for 'Feature' in data.[]:
+        loc = data['properties']['device']
+        coordinate = data['properties']['geometry']['coordinates']
+        temp = data['properties']['last']
+        update = data['properties']['time']
+        
 
 def get_features():
     "use get_config, get_data, json2dict and raw_data_to_dict_list functions to return data (list of dict)"
