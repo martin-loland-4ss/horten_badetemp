@@ -8,4 +8,4 @@ result = squared(num)
 print(f"the squared of {num} is {result}")
 
 def test_get_markers():
-    return 'Hei'
+    return 'Kjempebra Mona!'
