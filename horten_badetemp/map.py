@@ -29,6 +29,20 @@ def get_markers(data):
     """use data (list of dict with keys: 'location', 'coordinate', 'temperature' and 'updated')
     return (list of ipyleaflet.Marker objects), use get_marker, timestamp2human and popup_html function above
     """
+    markers = []
+
+    for sample in data:
+
+        location = sample['location']
+        coordrinate = sample['coordinate']
+        temperature = sample['temperature']
+        updated = timestamp2human(sample['updated'])
+
+        pop = popup_html(location, temperature, updated)
+        marker = get_marker(coordrinate, pop)
+        markers.append(marker)
+
+    return markers
 
 
 def add_markers_to_map(map, markers):
