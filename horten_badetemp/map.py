@@ -6,6 +6,8 @@ from .transformers import average_latlon, timestamp2human
 
 def get_map(center, zoom):
     "use center (tuple of two numbers) and zoom (number),  return ipyleaflet.Map object"
+    ipyleaflet.ZoomControl()
+    
 
 
 def popup_html(location, temperature, updated):
