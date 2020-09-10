@@ -30,7 +30,8 @@ def add_markers_to_map(map, markers):
 
 def add_fullscreen_control(map):
     "use map (ipyleaflet.Map object), add fullscreen control and return object"
-
+    ob = add_control(FullScreenControl())
+    return ob 
 
 def get_master_map():
     """Use the following functions to generate a map:
