@@ -15,6 +15,7 @@ def raw_data_to_dict_list(data):
     """convert data (dict) to (list of dict) 
     where each item in list is feature with 'location', 'coordinate', 'temperature' and 'updated'
     """
+    array = []
 
 
 def get_features():
