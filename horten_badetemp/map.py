@@ -21,8 +21,8 @@ def get_markers(data):
     return (list of ipyleaflet.Marker objects), use get_marker, timestamp2human and popup_html function above
     """
     markers = []
-    
-    for timestamp in data:  
+
+    for timestamp in data:
         item = data[timestamp]
 
         location = item['location']
