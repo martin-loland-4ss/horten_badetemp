@@ -17,7 +17,7 @@ def raw_data_to_dict_list(data):
     """
     array = []
 
-    for 'Feature' in data.[]:
+    for feature in data["features"]:
         loc = data['properties']['device']
         coordinate = data['properties']['geometry']['coordinates']
         temp = data['properties']['last']
