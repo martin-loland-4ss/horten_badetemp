@@ -16,7 +16,8 @@ def get_map(center, zoom):
 
 def popup_html(location, temperature, updated):
     "use location (str), temperature (str) and updated (str), return ipywidgets.HTML object"
-
+    html = f"<b>{location}</b><br>{temperature}&#8451;<br>{updated}"
+    return ipywidgets.HTML(html)
 
 def get_marker(coordinate, popup_html):
     "use coordinate (tuple of two numbers) and popup_html (ipywidgets.HTML), return ipyleaflet.Marker object"
