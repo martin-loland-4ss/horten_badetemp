@@ -4,6 +4,9 @@ import pathlib
 
 def file_reader(filepath):
     "read content of filepath (str) and return content (str)"
+    f = open(filepath, "r")
+    return f.read()
+
 
 
 def json2dict(json_text):
