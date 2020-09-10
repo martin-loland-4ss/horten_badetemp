@@ -5,6 +5,7 @@ from .readers import json2dict
 
 def get_data(api_url):
     "get text from api_url (str) and return content (str)"
+    return requests.get(api_url).text
 
 
 def extract_latlon(data):
