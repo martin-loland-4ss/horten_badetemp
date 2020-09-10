@@ -14,7 +14,7 @@ def popup_html(location, temperature, updated):
 
 def get_marker(coordinate, popup_html):
     "use coordinate (tuple of two numbers) and popup_html (ipywidgets.HTML), return ipyleaflet.Marker object"
-    m = ipyleaflet.Marker(location=coordinate, )
+    m = ipyleaflet.Marker(location=coordinate, draggable = False)
     m.popup = popup_html
     
     return m
