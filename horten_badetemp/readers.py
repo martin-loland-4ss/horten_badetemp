@@ -8,7 +8,7 @@ def file_reader(filepath):
 
 def json2dict(json_text):
     "read json_text (str) and return (dictionary)"
-    json_data = json.loads(json_text)
+    return json.loads(json_text)
 
 
 def get_config():
