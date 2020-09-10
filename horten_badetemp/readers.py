@@ -12,3 +12,8 @@ def json2dict(json_text):
 
 def get_config():
     "use file_reader and json2dict to return content of config.json as (dict)"
+    file = file_reader()
+    data = json2dict(file)
+
+    return config_to_dict(data)
+
