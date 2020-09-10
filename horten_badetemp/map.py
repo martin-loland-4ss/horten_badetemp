@@ -22,18 +22,16 @@ def get_markers(data):
     """
     markers = []
 
-    for timestamp in data:
-        item = data[timestamp]
+    for item in data:
+        sample = data[item]
 
-        location = item['location']
-        coordrinate = item['coordinate']
-        temperature = item['temperature']
-        updated = item['updated']
+        location = sample['location']
+        coordrinate = sample['coordinate']
+        temperature = sample['temperature']
+        updated = timestamp2human(sample['updated'])
 
         pop = popup_html(location, temperature, updated)
         marker = get_marker(coordrinate, pop)
-        # time = timestamp2human(timestamp)
-
         markers.append(marker)
 
     return markers
