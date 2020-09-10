@@ -14,6 +14,7 @@ mkvirtualenv horten
 
 ```
 pip install -r requirements.txt
+pip install jupyter_contrib_nbextensions
 jupyter nbextension enable --py widgetsnbextension
 jupyter nbextension enable --py --sys-prefix ipyleaflet
 python -m ipykernel install --user --name=horten
