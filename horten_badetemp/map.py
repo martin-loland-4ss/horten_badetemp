@@ -26,15 +26,9 @@ def add_markers_to_map(map, markers):
     """use map (ipyleaflet.Map object) and markers (list of ipyleaflet.Marker objects)
     add markers to map and return (ipyleaflet.Map object)
     """
-
-    center = (52.204793, 360.121558)
-
-    m = Map(center=center, zoom=15)
-
-    marker = Marker(location=center, draggable=False)
-    m.add_layer(marker);
-
-    m
+    for marker in markers:
+        map.add_layer(marker)
+    return map
 )
 
 
